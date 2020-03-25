@@ -5,8 +5,8 @@
 
 use app\widgets\Alert;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
+use yii\bootstrap4\Nav;
+use yii\bootstrap4\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
@@ -30,10 +30,12 @@ AppAsset::register($this);
     <?php
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
+		'brandImage' => '@web/images/brand2.jpg',
+		'screenReaderToggleText' => 'Menu',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
 			'id' => 'main-menu',
-            'class' => 'navbar navbar-expand',
+            'class' => 'navbar navbar-expand-lg navbar-light bg-light',
         ],
     ]);
     echo Nav::widget([
@@ -70,7 +72,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; Nmake <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
