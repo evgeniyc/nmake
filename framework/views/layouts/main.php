@@ -32,7 +32,8 @@ AppAsset::register($this);
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar navbar-expand-lg navbar-light bg-light',
+			'id' => 'main-menu',
+            'class' => 'navbar navbar-expand',
         ],
     ]);
     echo Nav::widget([
