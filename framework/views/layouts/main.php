@@ -26,16 +26,16 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
+<div class="container">
+<div id="header">
     <?php
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-		'brandImage' => '@web/images/brand2.jpg',
+       	'brandImage' => '@web/images/brand2.jpg',
 		'screenReaderToggleText' => 'Menu',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
 			'id' => 'main-menu',
-            'class' => 'navbar navbar-expand-lg navbar-light bg-light',
+            'class' => 'navbar navbar-expand-md navbar-dark bg-primary',
         ],
     ]);
     echo Nav::widget([
@@ -60,24 +60,27 @@ AppAsset::register($this);
     ]);
     NavBar::end();
     ?>
-
-    <div class="container">
+</div> <!--====================header==========================-->
+    <div id="breadcrumbs">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
+	</div>
+	<div id="alerts">	
         <?= Alert::widget() ?>
+	</div>
+	<div id="middle">
         <?= $content ?>
     </div>
-</div>
 
-<footer class="footer">
+<footer>
     <div class="container">
-        <p class="pull-left">&copy; Nmake <?= date('Y') ?></p>
+        <p class="float-left">&copy; Nmake <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="float-right"><?= Yii::powered() ?></p>
     </div>
 </footer>
-
+</div>
 <?php $this->endBody() ?>
 </body>
 </html>
