@@ -26,14 +26,14 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="container">
+
 <div id="header">
     <?php
     NavBar::begin([
        	'brandImage' => '@web/images/brand2.jpg',
+		'brandUrl' => Yii::$app->homeUrl,
 		'screenReaderToggleText' => 'Menu',
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
+		'options' => [
 			'id' => 'main-menu',
             'class' => 'navbar navbar-expand-md navbar-dark bg-primary',
         ],
@@ -41,16 +41,16 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav mr-auto'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => 'Главная', 'url' => ['/site/index']],
+            ['label' => 'О нас', 'url' => ['/site/about']],
+            ['label' => 'Контакты', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
+                ['label' => 'Вход', 'url' => ['/site/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
                 . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
+                    'Выход (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link logout']
                 )
                 . Html::endForm()
@@ -58,9 +58,16 @@ AppAsset::register($this);
             )
         ],
     ]);
+	echo '<div id="brand-title">'.Yii::$app->name.'</div>';
+	echo '<form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>';
+	
     NavBar::end();
     ?>
 </div> <!--====================header==========================-->
+<div class="container">
     <div id="breadcrumbs">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],

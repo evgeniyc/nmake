@@ -1,8 +1,9 @@
+
 html,
 body {
     height: 100%;
 }
-
+/*
 .wrap {
     min-height: 100%;
     height: auto;
@@ -35,7 +36,7 @@ body {
     color: #c55;
     font-style: italic;
 }
-
+*/
 /* add sorting icons to gridview sort links */
 a.asc:after, a.desc:after {
     position: relative;
@@ -112,4 +113,108 @@ a.desc:after {
 
 .nav > li > form > button.logout:focus {
     outline: none;
+}
+/*=================My styles===============*/
+body {
+	background: #f2cfda;
+}
+.body-content {
+	background: #c66aab;
+	border: 1px solid black;
+	box-shadow: 0 0 5px black;
+	border-radius: 5px;
+}
+.navbar-brand  img {
+	height: 40px;
+}
+#brand-title {
+	color: #68417f;
+	font-size: 200%;
+	font-style: italic;
+	font-weight: bold;
+	margin-right: 45px;
+	text-shadow: 0 0 2px yellow;
+}
+#main-menu {
+	background: #219bc3 !important;
+	border: 1px solid black;
+	box-shadow: 0 0 5px black;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	padding: 0 15px;
+}
+.breadcrumb {
+	background-color: #b2d3e1;
+    border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: 0 0 5px black;
+	padding: 5px;
+	
+}
+.breadcrumb {
+	font-size: 90%;
+	margin-bottom: 10px;
+}
+.breadcrumb a {
+	padding: 0 5px;
+}
+.breadcrumb > li + li:before {
+padding: 0 5px;
+color: black;
+content: "\e013";
+} 
+.sitebar h2 {
+	padding-top: 15px;
+}
+.sitebar ul {
+	list-style: none;
+	padding-left: 0;
+}
+.sitebar ul li {
+	border: 1px solid black;
+	margin-bottom: 15px;
+	padding: 5px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px black;
+	background: #68417f;
+	text-align: center;
+	word-wrap: break-word;
+}
+.sitebar ul li a {
+	color: yellow;
+	text-decoration: none;
+	
+	
+}
+.main-part {
+	border-left: 1px dotted black;
+}
+.content-title {
+	text-align: center;
+}
+.part {
+	border: 1px solid black;
+	background: #af9f7a;
+	text-align: center;
+	padding: 5px;
+	margin: 5px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px black;
+}
+.part-img img {
+	
+}
+footer {
+    background-color: #68417f;
+    padding-top: 20px;
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: 0 0 5px black;
+	margin-top: 10px;
+	padding: 5px;
+	overflow: auto;
+}
+footer p {
+	padding: 0;
+	margin: 0;
 }

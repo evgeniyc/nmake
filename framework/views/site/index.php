@@ -9,7 +9,7 @@ $this->title = 'Товары';
 
 	<div class="body-content container">
     <div class="row">
-		<div class="col-2 sitebar">
+		<div class="col-md-2 sitebar">
 			<h2>Категории:</h2>
 			<ul>
 				<li><a href="#">Электроника</a></li>
@@ -20,7 +20,7 @@ $this->title = 'Товары';
 				<li><a href="#">Спорт</a></li>
 			</ul>
 		</div>
-		<div class="col-10 main-part">
+		<div class="col-md-10 main-part">
 		<div class="content-title">
 			<h1>Электроника</h1>
 
