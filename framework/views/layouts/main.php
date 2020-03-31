@@ -9,6 +9,7 @@ use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use rmrevin\yii\fontawesome\FAS;
 
 AppAsset::register($this);
 ?>
@@ -59,9 +60,9 @@ AppAsset::register($this);
         ],
     ]);
 	echo '<div id="brand-title">'.Yii::$app->name.'</div>';
-	echo '<form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	echo '<form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Поиск по сайту" aria-label="Search">
+      <button class="btn btn-primary" type="submit">'.FAS::i('search').'</button>
     </form>';
 	
     NavBar::end();
